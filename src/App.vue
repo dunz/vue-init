@@ -4,10 +4,15 @@
             <router-link to="/">Home</router-link>
             |
             <!--            <router-link to="/about" @click.native="clickAbout">About</router-link>-->
-<!--                        <router-link :to="{name:'About'}" @click.native="clickAbout">About</router-link>-->
-<!--            <if-router-link :to="{name:'About'}" @condition="clickAbout">About</if-router-link>-->
-            <router-link :to="{name:'About'}">asdf</router-link>
-<!--            <a href="/about">A Link</a>-->
+            <!--                        <router-link :to="{name:'About'}" @click.native="clickAbout">About</router-link>-->
+            <!--<if-router-link :to="{name:'About'}" @condition="clickAbout">About</if-router-link>-->
+            <!--<span @click.capture="clickAbout">-->
+                <!--<router-link :to="{name:'About'}">adlfkj</router-link>-->
+            <!--</span>-->
+            <!--            <a href="/about">A Link</a>-->
+
+            <a href="#" @click="clickAbout">adsf</a>
+            <!--<router-link :to="{name:'About'}" @click.native.prevent.capture.stop="clickAbout">adlfkj</router-link>-->
         </div>
         <router-view/>
     </div>
@@ -16,17 +21,24 @@
 <script lang="ts">
 import {Component, Vue} from 'vue-property-decorator';
 import IfRouterLink from './IfRouterLink';
-
+import IfRouterLink2 from './IfRouterLink2';
 // Vue.use(IfRouterLink);
+
+const a = true;
 
 @Component({
     components: {
-        IfRouterLink
+        IfRouterLink,
+        IfRouterLink2
     }
 })
 export default class App extends Vue {
-    public clickAbout() {
-        return true;
+    public clickAbout(e) {
+        console.log(e.preventDefault)
+        if(a) {
+            e.preventDefault();
+        }
+        alert();
     }
 }
 </script>
