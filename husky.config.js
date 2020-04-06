@@ -9,6 +9,6 @@
 
 module.exports = {
     'hooks': {
-        'pre-commit': 'scripts/executeTest && npm run test:unit && exit 1'
+        'pre-commit': './scripts/executeTest && npm run test:unit && exit 1'
     }
 };
