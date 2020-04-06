@@ -39,11 +39,7 @@
     "typescript": "~3.7.5",
     "vue-template-compiler": "^2.6.11"
   },
-  "lint-staged": {
-    "*.js": [
-      "eslint --fix",
-      "git add",
-      "jest --bail --findRelatedTests"
-    ]
+  "gitHooks": {
+    "pre-push": "npm run test:unit --findRelatedTests"
   }
 }
