@@ -11,7 +11,7 @@
             <!--</span>-->
             <!--            <a href="/about">A Link</a>-->
 
-            <a href="#" @click="clickAbout">adsf</a>
+            <a href="#" @click="clickAbout">adsf1</a>
             <!--<router-link :to="{name:'About'}" @click.native.prevent.capture.stop="clickAbout">adlfkj</router-link>-->
         </div>
         <router-view/>
