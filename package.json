@@ -36,11 +36,5 @@
     "sass-loader": "^8.0.2",
     "typescript": "~3.7.5",
     "vue-template-compiler": "^2.6.11"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "npm test",
-      "pre-push": "npm test"
-    }
   }
 }
