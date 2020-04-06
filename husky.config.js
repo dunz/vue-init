@@ -10,6 +10,7 @@
 module.exports = {
     'hooks': {
         // 'pre-commit': 'scripts/executeTest.sh && npm run test:unit && exit 1'
-        'pre-commit': 'scripts/executeTest.sh && exit 1'
+        // 'pre-commit': 'scripts/executeTest.sh && lint-staged && exit 1'
+        'pre-commit': 'npm run test:unit'
     }
 };
